@@ -8,7 +8,7 @@
     "puppeteer": "^22.15.0"
   },
   "scripts": {
-    "test": "jest --maxWorkers=50%"
+    "test": "jest --maxWorkers=25%"
   },
   "jest": {
     "preset": "jest-puppeteer",

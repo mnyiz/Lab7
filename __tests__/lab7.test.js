@@ -9,6 +9,8 @@ describe('Basic user flow for Website', () => {
   it('Initial Home Page - Check for 20 product items', async () => {
     console.log('Checking for 20 product items...');
 
+    await page.goto('https://cse110-sp25.github.io/CSE110-Shop/');
+    await page.waitForSelector('product-item:nth-of-type(20)');
     // Query select all of the <product-item> elements and return the length of that array
     const numProducts = await page.$$eval('product-item', (prodItems) => {
       return prodItems.length;
